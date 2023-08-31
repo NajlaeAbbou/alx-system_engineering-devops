@@ -12,4 +12,4 @@ while [ $count -le 10 ]; do
 		echo "Best School"
 	fi
 	count=$((count + 1))
-donie
+done
