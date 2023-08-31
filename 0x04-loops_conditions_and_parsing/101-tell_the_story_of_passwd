@@ -1,20 +1,7 @@
 #!/usr/bin/env bash
 # Path to the /etc/passwd file
 passwd_file="/etc/passwd"
-
-# Check if the file exists
-if [ -e "$passwd_file" ]; then
-    # Use a while loop to read each line in the file
-    while IFS=: read -r username _ userid groupid _ home_directory shell; do
-        # Extract user ID information from /etc/passwd
-        user_info=$(getent passwd "$username")
-        password=$(echo "$user_info" | cut -d: -f2)
-        user_id_info=$(echo "$user_info" | cut -d: -f5)
-
-        # Display the formatted user information
-        echo "The user $username is part of the group $groupid gang, lives in $home_directory, and rides $shell. $userid's place is protected by the passcode $password, more info about the user here: $user_id_info"
-    done < "$passwd_file"
-else
-    echo "The /etc/passwd file does not exist."
-fi
-
+# Use a while loop to read each line in the file
+while IFS=: read -r username password userid groupid useridinfo homedir cmdshell; do
+    echo "The user $username is part of the $groupid gang, lives in $homedir and rides $cmdshell. $userid's place is protected by the passcode $password, more info about the user here: $useridinfo"
+done < "$passwd_file"
