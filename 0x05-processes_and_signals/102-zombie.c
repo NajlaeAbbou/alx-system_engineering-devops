@@ -1,12 +1,13 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 
 /**
  * main - zombie processes.
+ * Return: 0
  */
 int main(void)
 {
@@ -25,11 +26,11 @@ int main(void)
 		else
 			exit(0);
 	}
-	
-	while (1)
-        {
-                sleep(1);
-        }	
 
-	return (EXIT_SUCCESS);
+	while (1)
+	{
+		sleep(1);
+	}
+
+	return (0);
 }
