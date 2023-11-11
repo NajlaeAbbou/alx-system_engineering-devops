@@ -40,7 +40,7 @@ frontend hadjabbou-frontend
         http-request set-header X_Forwarded-Proto http
         default_backend hadjabbou-backend
 
-frontend akoatem-frontend-https
+frontend hadjabbou-frontend-https
         bind *:443 ssl crt /etc/haproxy/certs/hadjabbou.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend hadjabbou-backend
