@@ -1,0 +1,32 @@
+
+Title: The Journey of a URL: From Keystrokes to Google's Search Page
+
+Introduction:
+When you type "https://www.google.com" into your browser and press Enter, it initiates a complex sequence of events that involves several key components of the web stack. In this blog post, we'll take a deep dive into each step of the process, exploring how DNS, TCP/IP, firewall, HTTPS/SSL, load-balancers, web servers, application servers, and databases work together to deliver the Google search page to your screen.
+
+DNS Request:
+The journey begins with a Domain Name System (DNS) request. Your browser needs to translate the human-readable domain name "www.google.com" into an IP address that the computer can understand. This involves a query to a DNS server, which returns the corresponding IP address. This step is crucial as it allows your browser to locate the server hosting Google's website on the internet.
+
+TCP/IP:
+Once armed with the IP address, your browser establishes a Transmission Control Protocol (TCP) connection with the server using the Internet Protocol (IP). TCP ensures a reliable, ordered, and error-checked delivery of data packets between your browser and the server. This connection forms the basis for data transfer throughout the rest of the process.
+
+Firewall:
+As the connection is established, it may encounter firewalls along the way. Firewalls act as a security barrier between your computer and the internet, ensuring that only authorized traffic is allowed through. The firewall checks the request against a set of rules to determine if it should be permitted or denied.
+
+HTTPS/SSL:
+To secure the data transmitted between your browser and the server, the Hypertext Transfer Protocol Secure (HTTPS) is used. This secure version encrypts the data, protecting it from potential eavesdropping or tampering during transit. The encryption is achieved through the implementation of Secure Sockets Layer (SSL) or its successor, Transport Layer Security (TLS).
+
+Load-Balancer:
+For popular websites like Google, multiple servers handle incoming requests to distribute the load efficiently. Load balancers play a crucial role in this process by evenly distributing the incoming requests among the available servers. This ensures optimal resource utilization and prevents any single server from becoming a bottleneck.
+
+Web Server:
+Once past the load balancer, the request reaches one of Google's web servers. The web server's role is to handle the HTTP requests, process them, and generate an appropriate response. In the case of Google's homepage, the server may generate an HTML page with the search bar and other elements.
+
+Application Server:
+Beyond static content served by the web server, dynamic web applications, like Google Search, often rely on application servers. These servers execute application logic, interact with databases, and generate dynamic content based on user input or specific parameters. In the case of Google, the application server likely processes your search query and retrieves relevant results.
+
+Database:
+To provide accurate search results, Google relies on a massive database that indexes and stores information about the web. The application server communicates with the database to retrieve the most relevant results for your search query. This database is a critical component in delivering up-to-date and accurate information to users.
+
+Conclusion:
+The journey from typing "https://www.google.com" to seeing the search results involves a symphony of technologies and components working seamlessly together. Understanding this process provides valuable insights into the intricacies of web development and infrastructure, making it a fundamental knowledge area for any software engineer. As you navigate the internet, keep in mind the intricate dance of DNS, TCP/IP, firewalls, HTTPS/SSL, load-balancers, web servers, application servers, and databases that occurs behind the scenes to deliver the content you seek.
