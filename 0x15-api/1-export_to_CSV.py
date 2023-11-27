@@ -8,7 +8,7 @@ if __name__ == "__main__":
     utilid = sys.argv[1]
     url = "https://jsonplaceholder.typicode.com/"
     util = requests.get(url + "users/{}".format(utilid)).json()
-    utilnom= util.get("username")
+    utilnom = util.get("username")
     todolist = requests.get(url + "todos", params={"userId": utilid}).json()
 
     with open("{}.csv".format(utilid), "w", newline="") as csvfile:
